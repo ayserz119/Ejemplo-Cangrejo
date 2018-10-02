@@ -14,21 +14,35 @@ public class Crab extends Actor
      */
     public void act() 
     {
+        
+        
         move(4);
-        if(Greenfoot.isKeyDown("right"))
+        if(Greenfoot.isKeyDown("up"))
         {
-            turn(3);
+           setRotation(270);
         }
         
-         if(Greenfoot.isKeyDown("left"))
+         if(Greenfoot.isKeyDown("down"))
         {
-            turn(-3);
+            setRotation(90);
+        }
+        
+          if(Greenfoot.isKeyDown("left"))
+        {
+            setRotation(180);
+        }
+        
+         if(Greenfoot.isKeyDown("right"))
+        {
+            setRotation(0);
         }
         
         if (isTouching(Gusano.class))
         {
             removeTouching(Gusano.class);
+            
         }
+        
     }    
     
 }
