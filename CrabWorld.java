@@ -12,6 +12,7 @@ public class CrabWorld extends greenfoot.World
     
     private int gusanosComidos;
     ArrayList<Gusano>gusanos;
+    private GreenfootSound musica;
     
 
     /**
@@ -43,9 +44,16 @@ public class CrabWorld extends greenfoot.World
             addObject(g, Greenfoot.getRandomNumber(560)+1,Greenfoot.getRandomNumber(560)+1);
         }
         
-        private void prepara(int numGusanos)
-        {
-            
-        }
+        musica = new GreenfootSound("Fondo.mp3");
+    }
+    
+    public void started()
+    {
+        musica.playLoop();
+    }
+    
+    public void stopped()
+    {
+        musica.pause();
     }
 }

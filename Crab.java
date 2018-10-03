@@ -40,9 +40,18 @@ public class Crab extends Actor
         if (isTouching(Gusano.class))
         {
             removeTouching(Gusano.class);
+            Greenfoot.playSound("eating.wav");
+        }
+        
+        if (isTouching(Langosta.class))
+        {
+            Label perdiste = new Label ("Perdiste una vida", 30);
+            getWorld().addObject(perdiste, 250,250);
+            
             
         }
         
     }    
+    
     
 }

@@ -24,5 +24,12 @@ public class Langosta extends Actor
             removeTouching(Gusano.class);
         }
         
+        if (isTouching(Gusano.class))
+        {
+            setLocation(250,250);
+            Label perdiste= new Label ("Perdiste una vida", 30);
+            getWorld().addObject(perdiste, 250, 250);
+            
+        }
     }    
 }
